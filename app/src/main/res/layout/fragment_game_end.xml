@@ -1,0 +1,390 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_end_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_24"
+        android:paddingRight="@dimen/margin_24"
+        android:paddingTop="@dimen/margin_20"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/result_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Results will be declared "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_20" />
+
+                <TextView
+                    android:id="@+id/game_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:fontFamily="sans-serif-medium"
+                    android:text=""
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/font_20" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_45"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/hours1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/hours2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:gravity="center_vertical"
+                    android:text=":"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/font_44"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/minutes1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/imageView1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/minutes2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/imageView1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:gravity="center_vertical"
+                    android:text=":"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/font_44"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/seconds1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/timer_tiker_single_width"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/timer_back" />
+
+                    <TextView
+                        android:id="@+id/seconds2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/font_44"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/result_locked"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:src="@drawable/lock"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/login_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/footer_layout"
+                android:layout_marginLeft="@dimen/play_btn_margin"
+                android:layout_marginRight="@dimen/play_btn_margin"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="@string/login_text_result"
+                    android:textColor="@color/footer_grey"
+                    android:textSize="@dimen/font_14" />
+
+                <Button
+                    android:id="@+id/login_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/play_btn_box_height"
+                    android:layout_above="@+id/footer_layout"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:background="@drawable/rounded_button_yellow"
+                    android:text="@string/login_from_dash"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center_horizontal"
+                android:text="@string/game_end_text1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_20" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_leader_box_height"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/home_box"
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@drawable/box_back"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/open_leaderboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:src="@drawable/trophy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="@string/trivia_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_14" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/archive_box"
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/box_back"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/open_archive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:src="@drawable/archive" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="@string/game_archive"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_14" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

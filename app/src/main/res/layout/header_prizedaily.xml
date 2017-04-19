@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prizedaily_parent_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/archive_grey"
+    android:drawableRight="@drawable/down_arrow_24"
+    android:padding="@dimen/margin_10"
+    android:textColor="@color/white"
+    android:textSize="@dimen/font_16">
+
+</TextView>

@@ -1,0 +1,52 @@
+{
+  "project_info": {
+    "project_number": "586879781966",
+    "project_id": "trivia-android-app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586879781966:android:81d69eb1dfa22bd8",
+        "android_client_info": {
+          "package_name": "toi.com.trivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586879781966-7ts5kbd1dfqvj5ru7o74eu75q1j20mnq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "toi.com.trivia",
+            "certificate_hash": "616C0DF53A30302B33091CEDE6B4C9BCDB216DA1"
+          }
+        },
+        {
+          "client_id": "586879781966-lrej5ahfpfeul0t1g6qbtrh52phdpgjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "toi.com.trivia",
+            "certificate_hash": "072A905B26695D8A10FB9D87979CED9F891AE190"
+          }
+        },
+        {
+          "client_id": "586879781966-9va3138op1g7lighsjvv48cje1h92bqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

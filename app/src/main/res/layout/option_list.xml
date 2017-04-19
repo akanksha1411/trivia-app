@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_button_white">
+
+    <TextView
+        android:id="@+id/option_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/opt_list_height"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="options"
+        android:textColor="@color/grey_background"
+        android:textSize="@dimen/font_16" />
+
+</LinearLayout>
