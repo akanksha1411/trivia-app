@@ -553,7 +553,7 @@ public class GameEnd_New extends Fragment implements View.OnClickListener, Trivi
         Log.d("activity result called", "leaderboard");
 
         if (requestCode == RESPONSE_LOGIN_CODE) {
-        //if (resultCode == RESPONSE_LOGIN_CODE) {
+
             if (data != null) {
                 TriviaUser user = Trivia.getInstance().getTriviaConfiguration().getTriviaDataProvider().getUser();
 

@@ -1006,8 +1006,8 @@ public class Leaderboard_New extends AppCompatActivity implements WeekCalenderVi
 
         Log.d("activity result called", "leaderboard");
 
-        //if (requestCode == RESPONSE_LOGIN_CODE) {
-        if (resultCode == LOGIN_REQUEST_CODE) {
+        if (requestCode == RESPONSE_LOGIN_CODE) {
+
             if (data != null) {
                 TriviaUser user = Trivia.getInstance().getTriviaConfiguration().getTriviaDataProvider().getUser();
                 if (user != null) {
